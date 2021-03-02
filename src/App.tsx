@@ -13,9 +13,11 @@ const App: React.FC = () => {
     return rows
   })
 
-  // console.log(grid);
   return (
-    <div>
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: `repeat(${numCols}, 20px)`
+    }}>
       {grid.map((rows, i) =>
         rows.map((col, k) => (
           <div
